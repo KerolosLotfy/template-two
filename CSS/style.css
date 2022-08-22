@@ -1,0 +1,734 @@
+* {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
+    --section-padding: 100px;
+    --text-color: #fff;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: max-content;
+    text-transform: capitalize;
+    display: block;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.header {
+    background-image: url("../Images/landing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #0008;
+}
+
+header {
+    width: 80%;
+    height: auto;
+    color: white;
+    margin: auto;
+}
+
+.header header>div {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #757575;
+    z-index: 2;
+    padding: 20px;
+}
+
+.logo {
+    width: auto;
+}
+
+nav {
+    height: 100%;
+    position: relative;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 20px;
+}
+
+nav ul {
+    height: 100%;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 10px;
+    height: 100%;
+    text-transform: capitalize;
+    position: relative;
+}
+
+nav ul li a {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    left: 50%;
+    bottom: -32px;
+    transform: translate(-50%, 0);
+    width: 0px;
+    height: 2px;
+    transition: all 0.5s;
+
+}
+
+
+.active-link a {
+    color: var(--main-color) !important;
+}
+
+.active-link a::before {
+    width: 100% !important;
+}
+
+input#search {
+    border-radius: 20px;
+    transition: width 1s;
+    height: 25px;
+    border: none;
+    outline: none;
+    width: 1px;
+    margin: 0 15px;
+}
+
+label#search-icon {
+    cursor: pointer;
+}
+
+.show-search {
+    width: 170px !important;
+    padding: 15px;
+}
+
+
+.header .text {
+    background-color: var(--transparent-color);
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 50%;
+    /* height: 45%; */
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px 50px 200px;
+}
+
+.text h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.header .arrows {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, 50%);
+    left: 0;
+    border: none;
+    font-size: 25px;
+    padding: 0 50px;
+    color: #fff;
+    z-index: 2;
+}
+
+.header .arrows * {
+    cursor: pointer;
+}
+
+.i {
+    color: var(--main-color);
+}
+
+
+.cricle {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 20px;
+}
+
+.cricle span {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+.active {
+    background-color: var(--main-color) !important;
+    border: 2px solid var(--main-color) !important;
+    color: #fff;
+}
+
+.show-menu {
+    display: flex !important;
+    width: 100vw;
+    transition: all 1s linear;
+}
+
+
+
+/* *********************************** services section ****************************************************/
+
+section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    width: 100vw;
+    height: auto;
+}
+
+
+
+section .title {
+    width: 100%;
+}
+
+.title h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    position: relative;
+    padding: 20px 0;
+    font-weight: 400;
+    font-weight: 500;
+}
+
+.title h1::before {
+    background-color: #000;
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+
+}
+
+.title h1::after {
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -5px;
+    border: 1px solid #000;
+    transform: translate(-50%, 0);
+}
+
+section .desc {
+    width: 40%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* padding: 50px; */
+    width: 100%;
+}
+
+
+.services .serv {
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+    grid-template-rows: .5fr 1fr;
+    width: 450px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.serv-icon {
+    grid-area: 1/1/2/2;
+    height: 100%;
+}
+
+.serv-name {
+    grid-area: 1/2/2/3;
+    color: var(--main-color);
+}
+
+.serv p {
+    grid-area: 2/2/3/3;
+}
+
+/* *********************************** design section ****************************************************/
+#design {
+    background-image: url("../Images/design-features.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    height: 100vh;
+}
+
+#design::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #0008;
+}
+
+#design .text {
+    position: absolute;
+    background-color: var(--transparent-color);
+    right: 0;
+    width: 50%;
+    height: 50%;
+    color: #fff;
+    padding: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+#design img {
+    position: absolute;
+    left: 10%;
+    bottom: -60px;
+    /* height: 50%; */
+}
+
+#design .text ul li {
+    margin: 20px;
+}
+
+#design .text ul li span {
+    margin: 0 20px;
+}
+
+/* *********************************** Portfolio section ****************************************************/
+#portfolio .filter {
+    width: 100%;
+}
+
+.filter ul {
+    width: 100%;
+    height: 100%;
+}
+
+.filter ul li {
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.imgs-container {
+    margin: 30px 0;
+
+}
+
+.imgs-container img {
+    width: 25%;
+    position: relative;
+}
+
+
+#portfolio a {
+    margin: auto;
+}
+
+/* *********************************** video section ****************************************************/
+
+#video {
+    position: relative;
+    padding: 0px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+#video .text {
+    background-color: var(--transparent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 40px;
+    transform: translate(0, -50%);
+
+}
+
+#video .text * {
+    margin: 10px;
+}
+
+#video .text button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+/* *********************************** about section ****************************************************/
+#about {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#about img {
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    transform: translate(-50%, 0);
+}
+
+/* *********************************** states section ****************************************************/
+
+#states {
+    padding: 0;
+    background-image: url(../Images/stats.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+#states::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #0008;
+}
+
+#states>div {
+    background-color: var(--transparent-color);
+    z-index: 2;
+    width: 80%;
+    padding: 50px;
+    margin: auto;
+    height: 50%;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+#states>div .state {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+}
+
+
+.state .icon {
+    background-color: #000;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+/* *********************************** pricing section ****************************************************/
+.prices-container {
+    margin: 100px 50px;
+}
+
+.prices {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between !important;
+    gap: 20px;
+}
+
+.prices .price {
+    background-color: #fcfcfc;
+    border-top: 1px solid var(--main-color);
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    width: 300px;
+    justify-content: space-evenly;
+}
+
+.price div {
+    border-bottom: 1px solid var(--main-color);
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.price .features p {
+    border-bottom: 1px solid var(--main-color);
+    padding: 10px 0;
+    width: max-content;
+    margin: auto;
+    font-size: 20px;
+}
+
+.price button {
+    border: 1px solid var(--main-color);
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.price button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+
+#pricing p {
+    text-align: center;
+}
+
+#pricing>a {
+    margin: 30px auto;
+}
+
+
+/* *********************************** subscribe section ****************************************************/
+.subscribe {
+    background-image: url("../Images/subscribe.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+}
+
+
+.subscribe::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #0008;
+}
+
+.subscribe div {
+    z-index: 2;
+}
+
+.subscribe div form {
+    color: var(--text-color);
+    border: 1px solid #fff;
+    position: relative;
+    max-width: max-content;
+}
+
+.subscribe div form>svg {
+    margin: 0 0 0 20px;
+    font-size: 25px;
+}
+
+.subscribe div form input[type="submit"] {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.subscribe div form input#mail {
+    padding: 20px;
+    background-color: transparent;
+    color: #fff;
+    margin-left: 10px;
+    border: none;
+    width: 300px;
+    font-size: 20px;
+}
+
+.subscribe div p {
+    margin: 20px;
+}
+
+
+
+
+/* *********************************** contact section ****************************************************/
+
+#contact .content {
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 70%;
+    margin: auto;
+    height: 400px;
+    padding: 10px;
+    /* height: auto; */
+    /* flex-flow: column-reverse; */
+    /* align-items: center; */
+    /* width: 100%;*/
+}
+
+
+.content form {
+    width: 70%;
+    position: relative;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.content form * {
+    width: 100%;
+    padding: 15px;
+}
+
+.content form input[type="submit"] {
+    width: max-content;
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: -60px;
+    text-transform: uppercase;
+}
+
+.content>div {
+    width: 25%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.content>div h4 {
+    margin-bottom: 20px;
+}
+
+/* *********************************** footer ****************************************************/
+
+footer {
+    background-image: url(../Images/subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: var(--text-color);
+    align-items: center !important;
+    z-index: 0;
+    padding: 50px;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #0008;
+    z-index: -1;
+}
+
+footer img {
+    margin-bottom: 30px;
+    width: 150px;
+}
+
+footer .social {
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+footer .social h2 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+
+footer .social ul li a {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+footer p span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+
+
+#scroll-up {
+    background-color: var(--main-color);
+    position: fixed;
+    right: 20px;
+    bottom: -20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    visibility: hidden;
+}
+
+.show-up {
+    /* display: flex !important; */
+    transition: all .5s linear;
+    bottom: 20px !important;
+    visibility: visible !important;
+}
