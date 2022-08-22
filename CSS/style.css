@@ -12,6 +12,7 @@
     --text-color: #fff;
 }
 
+/* by js */
 .btn {
     background-color: var(--main-color);
     color: var(--text-color);
@@ -35,27 +36,29 @@ body {
 
 .header {
     background-image: url("../Images/landing.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     padding: 0px;
-    width: 100vw;
     height: 100vh;
-
+    z-index: 0;
 }
 
-.header::before {
+.header::before,
+#design::before,
+#states::before,
+.subscribe::before,
+footer::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     background-color: #0008;
+    z-index: -1;
 }
 
 header {
     width: 80%;
-    height: auto;
     color: white;
     margin: auto;
 }
@@ -68,12 +71,8 @@ header {
     padding: 20px;
 }
 
-.logo {
-    width: auto;
-}
 
 nav {
-    height: 100%;
     position: relative;
 }
 
@@ -113,7 +112,7 @@ nav ul li a::before {
 
 }
 
-
+/* by js */
 .active-link a {
     color: var(--main-color) !important;
 }
@@ -124,18 +123,18 @@ nav ul li a::before {
 
 input#search {
     border-radius: 20px;
-    transition: width 1s;
+    transition: width 0.5s;
     height: 25px;
-    border: none;
     outline: none;
     width: 1px;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 label#search-icon {
     cursor: pointer;
 }
 
+/* by js */
 .show-search {
     width: 170px !important;
     padding: 15px;
@@ -146,14 +145,9 @@ label#search-icon {
     background-color: var(--transparent-color);
     color: #fff;
     position: absolute;
-    left: 0px;
     top: 50%;
     transform: translate(0, -50%);
     width: 50%;
-    /* height: 45%; */
-    border: none;
-    display: flex;
-    flex-direction: column;
     padding: 50px 50px 50px 200px;
 }
 
@@ -167,18 +161,16 @@ label#search-icon {
     position: absolute;
     top: 50%;
     transform: translate(0, 50%);
-    left: 0;
-    border: none;
     font-size: 25px;
     padding: 0 50px;
     color: #fff;
-    z-index: 2;
 }
 
 .header .arrows * {
     cursor: pointer;
 }
 
+/* by js */
 .i {
     color: var(--main-color);
 }
@@ -200,12 +192,14 @@ label#search-icon {
     transition: all .5s;
 }
 
+/* by js */
 .active {
     background-color: var(--main-color) !important;
     border: 2px solid var(--main-color) !important;
     color: #fff;
 }
 
+/* by js */
 .show-menu {
     display: flex !important;
     width: 100vw;
@@ -224,18 +218,12 @@ section {
 }
 
 
-
-section .title {
-    width: 100%;
-}
-
 .title h1 {
     text-transform: uppercase;
     font-size: 50px;
     position: relative;
     padding: 20px 0;
     font-weight: 400;
-    font-weight: 500;
 }
 
 .title h1::before {
@@ -244,7 +232,6 @@ section .title {
     position: absolute;
     width: 60%;
     height: 3px;
-    border-radius: 20px;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 0);
@@ -275,7 +262,6 @@ section .desc {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    /* padding: 50px; */
     width: 100%;
 }
 
@@ -312,17 +298,9 @@ section .desc {
     overflow: hidden;
     padding: 0;
     height: 100vh;
+    z-index: 0;
 }
 
-#design::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: #0008;
-}
 
 #design .text {
     position: absolute;
@@ -344,7 +322,6 @@ section .desc {
     position: absolute;
     left: 10%;
     bottom: -60px;
-    /* height: 50%; */
 }
 
 #design .text ul li {
@@ -451,16 +428,9 @@ video {
     background-size: cover;
     height: 500px;
     position: relative;
+    z-index: 0;
 }
 
-#states::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    background-color: #0008;
-}
 
 #states>div {
     background-color: var(--transparent-color);
@@ -561,17 +531,9 @@ h1 {
     background-repeat: no-repeat;
     color: #fff;
     position: relative;
+    z-index: 0;
 }
 
-
-.subscribe::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    background-color: #0008;
-}
 
 .subscribe div {
     z-index: 2;
@@ -615,15 +577,10 @@ h1 {
 
 #contact .content {
     align-items: flex-start;
-    justify-content: space-around;
     width: 70%;
     margin: auto;
     height: 400px;
     padding: 10px;
-    /* height: auto; */
-    /* flex-flow: column-reverse; */
-    /* align-items: center; */
-    /* width: 100%;*/
 }
 
 
@@ -671,15 +628,6 @@ footer {
     padding: 50px;
 }
 
-footer::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    background-color: #0008;
-    z-index: -1;
-}
 
 footer img {
     margin-bottom: 30px;
@@ -709,8 +657,6 @@ footer p span {
     font-weight: bold;
 }
 
-
-
 #scroll-up {
     background-color: var(--main-color);
     position: fixed;
@@ -727,7 +673,6 @@ footer p span {
 }
 
 .show-up {
-    /* display: flex !important; */
     transition: all .5s linear;
     bottom: 20px !important;
     visibility: visible !important;
